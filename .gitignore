@@ -11,3 +11,9 @@
 *.lai
 *.la
 *.a
+
+# Build directory for in-source builds
+build
+
+# Auto-generated Makefile
+Makefile
