@@ -1,8 +1,10 @@
 cxx11tests
 ==========
 
+**TL;DR**
 Collection of tests to check which C++11 features are supported by a specific
 (pre-installed) compiler.
+*This is work in progress, so check again for new tests and bugfixes.*
 
 
 Intent
@@ -22,10 +24,31 @@ compile the code. For that reason, this test suite was created to give users a
 straightforward tool for the path to C++11.
 
 
-Requirements & Installation
+Coverage
+--------
+
+The following C++11 features are checked (excerpt - for the full list, check out
+the `src/` directory, as all files are named after the feature they are
+checking):
+
+*   **auto**
+*   **constexpr**
+*   **enums** (strongly typed, enum classes)
+*   **initializer lists**
+*   **lambdas**
+*   **nested template closer**
+*   **nullptr**
+*   **range-based for**
+*   **raw string literals**
+*   **unicode character types**
+*   **unicode string literals**
+*   **uniform initialization syntax**
+
+
+Installation & Requirements
 ---------------------------
 
-The following software packages are needed to run the tests:
+The following software packages are needed to run cxx11tests:
 
 *   Python 3 (>= 3.3)
 *   GNU Make
