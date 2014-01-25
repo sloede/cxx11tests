@@ -3,6 +3,7 @@
 LINEWIDTH = 80
 COLORIZED = True
 
+import os
 import shlex
 import subprocess
 import sys
@@ -35,7 +36,10 @@ def main():
         statustext = 'FAIL'
 
     # Add coloring if desired
-    if COLORIZED and sys.stdout.isatty():
+    use_colors = COLORIZED
+    if 'COLORIZED' in os.environ:
+        use_colors = True if os.environ['COLORIZED'] == '1' else False
+    if use_colors and sys.stdout.isatty():
         if status:
             statustext = '\033[32m' + statustext + '\033[0m'
         else:
