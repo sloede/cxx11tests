@@ -12,6 +12,7 @@ def main():
     src_dir = os.path.join(root_dir, 'src')
     m = MakefileGen(root_dir, src_dir, 'build', 'cpp', 'g++')
     m.generate()
+    return 0
 
 
 class MakefileGen:
@@ -92,6 +93,9 @@ class MakefileGen:
 
         # Add compiler flags if specified
         self.makefile_header.append("CXXFLAGS := {}".format(CXXFLAGS))
+
+        # Enable colors by default
+        self.makefile_header.append("export COLORIZED ?= 1")
         
         print("Makefile header generated.")
 
@@ -140,6 +144,7 @@ class MakefileGen:
         self.makefile_targets.append("# Clean up everything")
         self.makefile_targets.append("distclean: clean")
         self.makefile_targets.append("\t@rm -f Makefile")
+        self.makefile_targets.append("\t@rm -f $(SRC)/runtest.pyc")
         self.makefile_targets.append("")
         self.makefile_targets.append("# Show targets that can be built")
         self.makefile_targets.append("help:")
@@ -172,28 +177,5 @@ class MakefileGen:
         print("Makefile written to disk.")
 
 
-class TestMakefileGen(unittest.TestCase):
-    def setUp(self):
-        self.m = MakefileGen()
-
-    def testInitWithSrcDir(self):
-        m = MakefileGen(src_dir='src')
-
-    def testInitWithFileExt(self):
-        m = MakefileGen(ext='cpp')
-
-    def testGenerateCreatesMakefile(self):
-        self.m.generate()
-        self.assertTrue(os.path.isfile('Makefile'))
-
-    def tearDown(self):
-        if os.path.isfile('Makefile'):
-            os.remove('Makefile')
-
-
 if __name__ == '__main__':
-    if '--test' in sys.argv:
-        sys.argv.remove('--test')
-        unittest.main()
-        sys.exit()
     sys.exit(main())
