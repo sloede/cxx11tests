@@ -1,9 +1,12 @@
 cxx11tests
 ==========
 
-**TL;DR**
+TL;DR
+-----
+
 Collection of tests to check which C++11 features are supported by a specific
 (pre-installed) compiler.
+
 *This is work in progress, so check again for new tests and bugfixes.*
 
 
