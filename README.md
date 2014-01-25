@@ -59,7 +59,7 @@ default, all tests are run. To start them, just execute
 
     make
 
-and and wait for the tests to finish. Make will not stop after failed tests, buy
+and and wait for the tests to finish. Make will not stop after failed tests, but
 continue until all tests have been run. On subsequent calls to `make`, only
 tests that previously failed will be run again. To override this behavior and
 run all tests regardless of their previous status, run the 'force' target, i.e.
@@ -73,7 +73,7 @@ cxx11tests.). Note that you do not need to call `make distclean` if you want to
 configure a new compiler - `configure.py` will do that for you. If you want to
 get a list of all targets you can build, just call `make help`.
 
-By default, the tes results will be colored for easier recognition of failed
+By default, the test results will be colored for easier recognition of failed
 tests. You can switch of colors by setting the environment variable `COLORIZED`
 to '0' (zero), or my calling make with
 
@@ -83,5 +83,5 @@ to '0' (zero), or my calling make with
 Contributions
 -------------
 
-Please feel free to add improvements to the test suite. I will be happy to add
-your contributions if they enhance the user experience.
+Please feel free to add improvements to the test suite. I will be happy to
+review and add your contributions if you send me a pull request or a patch.
