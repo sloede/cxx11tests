@@ -17,20 +17,22 @@ for Subversion/Git versions or are incomplete as far as the C++11 features go.
 Especially in scientific computing, users are often stuck with whatever compiler
 and compiler version the vendors of a supercomputer deem to be fit for their
 machines. This can be very frustrating if a reasarch code is to be ported to
-C++11, and nobody knows which compilers will still be able to compile the code.
-For that reason, this test suite was created to give the users a straightforward
-tool for the path to C++11.
+C++11, and it is tedious to find out which compilers will still be able to
+compile the code. For that reason, this test suite was created to give users a
+straightforward tool for the path to C++11.
 
 
-Installation & Requirements
+Requirements & Installation
 ---------------------------
 
-There really is no installation of cxx11tests necessary. The following software
-packages are needed to run cxx11tests:
+The following software packages are needed to run the tests:
 
 *   Python 3 (>= 3.3)
 *   GNU Make
 *   any C++ compiler
+
+There is no installation necessary, just obtain cxx11tests and you are good to
+go.
 
 
 Usage
