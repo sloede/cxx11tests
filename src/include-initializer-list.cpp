@@ -1,2 +1,2 @@
-// Check if initialize_list may be included
+// Check if initializer_list may be included
 #include <initializer_list>
