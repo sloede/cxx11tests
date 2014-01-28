@@ -1,7 +1,7 @@
-// Check if std::weak_ptr is supported
+// Check if std::shared_ptr is supported
 #include <memory>
 #include <string>
 
 void f() {
-  std::weak_ptr<std::string> p(new std::string);
+  std::shared_ptr<std::string> p(new std::string);
 }

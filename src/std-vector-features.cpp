@@ -5,7 +5,7 @@ void f() {
   std::vector<int> v;
   v.emplace_back(10);
   v.shrink_to_fit();
-  int* = v.data;
+  int* d = v.data();
   v.cbegin();
   v.cend();
   v.crbegin();

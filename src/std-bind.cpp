@@ -3,4 +3,4 @@
 
 int fun(int a, int b) { return a + b; }
 
-std::function<int(int)> f = std::bind(fun, 10, _1);
+std::function<int(int)> f = std::bind(fun, 10, std::placeholders::_1);
