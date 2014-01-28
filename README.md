@@ -42,7 +42,7 @@ checking):
 *   **`default`'d, `delete`'d (member) functions**
 *   **`final`, `override`**
 *   **`nullptr`**
-*   **`std::unique\_ptr`, `std::shared\_ptr`, `std::weak\_ptr`**
+*   **`std::unique_ptr`, `std::shared_ptr`, `std::weak_ptr`**
 *   **alias templates and `using` as typedef**
 *   **default member initialization**
 *   **delegating constructors, inheriting constructors**
@@ -62,7 +62,7 @@ checking):
 *   **unicode string literals**
 *   **uniform initialization syntax**
 *   **variadic templates**
-*   **new header files:** `array`, `chrono`, `condition\_variable`, `forward\_list`, `functional`, `future`, `initializer\_list`, `mutex`, `regex`, `thread`, `tuple`, `unordered\_set`, `unordered\_map
+*   **new header files:** `array`, `chrono`, `condition_variable`, `forward_list`, `functional`, `future`, `initializer_list`, `mutex`, `regex`, `thread`, `tuple`, `unordered_set`, `unordered_map`
 
 
 
