@@ -34,18 +34,36 @@ The following C++11 features are checked (excerpt - for the full list, check out
 the `src/` directory, as all files are named after the feature they are
 checking):
 
-*   **auto**
-*   **constexpr**
+*   **C99 features: `long long`, vararg macros**
+*   **`alignas`, `alignof`**
+*   **`auto`**
+*   **`constexpr`**
+*   **`decltype`**
+*   **`default`'d, `delete`'d (member) functions**
+*   **`final`, `override`**
+*   **`nullptr`**
+*   **`std::unique\_ptr`, `std::shared\_ptr`, `std::weak\_ptr`**
+*   **alias templates and `using` as typedef**
+*   **default member initialization**
+*   **delegating constructors, inheriting constructors**
 *   **enums** (strongly typed, enum classes)
+*   **generalized functors, `std::function`, `std::bind`**
 *   **initializer lists**
+*   **inline namespaces**
 *   **lambdas**
+*   **local types as template arguments**
 *   **nested template closer**
-*   **nullptr**
 *   **range-based for**
 *   **raw string literals**
+*   **rvalue references, move support, perfect forwarding**
+*   **static assertions**
+*   **tuples**
 *   **unicode character types**
 *   **unicode string literals**
 *   **uniform initialization syntax**
+*   **variadic templates**
+*   **new header files:** `array`, `chrono`, `condition\_variable`, `forward\_list`, `functional`, `future`, `initializer\_list`, `mutex`, `regex`, `thread`, `tuple`, `unordered\_set`, `unordered\_map
+
 
 
 Installation & Requirements
