@@ -162,7 +162,7 @@ class MakefileGen:
         print("Makefile targets generated.")
 
     def create_makefile_footer(self):
-        print("Maekfile footer generated.")
+        print("Makefile footer generated.")
 
     def write_makefile(self):
         self.makefile = 'Makefile'
