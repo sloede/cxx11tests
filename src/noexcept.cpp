@@ -1,4 +1,4 @@
-// Check  if noexcept is supported
+// Check if noexcept is supported
 void f() noexcept;
 
 void g() noexcept(true);
