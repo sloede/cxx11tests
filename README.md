@@ -71,7 +71,7 @@ Installation & Requirements
 
 The following software packages are needed to run cxx11tests:
 
-*   Python 3 (>= 3.3)
+*   Python 3 (>= 3.3) or Perl > 5.0
 *   GNU Make
 *   any C++ compiler
 
@@ -83,8 +83,8 @@ Usage
 -----
 
 After downloading (and unpacking, if necessary), enter the cxx11tests directory.
-To prepare the tests, you need to run the `configure.py` script once to generate
-the Makefile that will run the tests. The configure script respects three
+To prepare the tests, you need to run either the `configure.py` script or the `configure.pl`script
+once to generate the Makefile that will run the tests. The configure script respects three
 environment variables that you may use to set the compiler command and any
 necessary flags:
 
@@ -96,14 +96,18 @@ If you want to check e.g. the currently installed GNU compiler, you could run
 configure as
 
     CXX=g++ CXXFLAGS=-std=c++11 ./configure.py
+or
+    CXX=g++ CXXFLAGS=-std=c++11 ./configure.pl
 
 You may also run the configure script from another directory (out-of-source
 tests).
 
 After running the configure script, you can run the tests using `make`. By
-default, all tests are run. To start them, just execute
+default, all tests are run. Makefile is using gmake syntax. To start them, just execute
 
-    make
+    make 
+or
+    gmake
 
 and and wait for the tests to finish. Make will not stop after failed tests, but
 continue until all tests have been run. On subsequent calls to `make`, only
@@ -111,6 +115,8 @@ tests that previously failed will be run again. To override this behavior and
 run all tests regardless of their previous status, run the 'force' target, i.e.
 
     make force
+or
+    gmake force
 
 If you want to clean out all previously run tests, call `make clean`. `make
 distclean` will also delete the Makefile, so you will have to run the configure
@@ -124,6 +130,8 @@ tests. You can switch of colors by setting the environment variable `COLORIZED`
 to '0' (zero), or my calling make with
 
     make COLORIZED=0
+or
+    gmake COLORIZED=0
 
 
 Contributions
